@@ -1,2 +1,2 @@
-# Design-pattern
-Java设计模式
+# Design-pattern(设计模式#Java实现)
+> 代码写多了，会自己封装一些常用的包来复用减少代码的重复。还有在看第三方的依赖包的时候常常看到Factory，Proxy还有Adapter等等关键词，学习设计模式能够更好的理解别人的代码和写好自己的代码。
