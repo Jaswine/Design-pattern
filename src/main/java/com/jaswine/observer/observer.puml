@@ -1,0 +1,47 @@
+@startuml
+interface Subject{
+    void registerObserver(Observer) 注册订阅者
+    void removeObserver(Observer) 移除订阅者
+    void notifyObservers() 通知订阅者
+}
+
+interface Observer{
+    void update(Map showMap)
+}
+
+interface DisplayShow{
+    void display()
+}
+
+class CCTV implements Subject{
+    Map<String,String> showMap 节目列表
+    List<Observer> observers 订阅者
+    CCTV() 构造器
+    void registerObserver(Observer)
+    void removeObserver(Observer)
+    void notifyObservers()
+    void setShowMap(showName,showContent) 新增节目
+}
+
+class ZJTV implements Observer,DisplayShow{
+    Subject cctv
+        ZJTV()
+        void display()
+        void update()
+}
+
+class JSTV implements Observer,DisplayShow{
+    Subject cctv
+    JSTV()
+    void display()
+    void update()
+}
+
+class SHTV implements Observer,DisplayShow{
+    Subject cctv
+    SHTV()
+    void display()
+    void update()
+}
+@enduml
+
